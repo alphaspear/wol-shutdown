@@ -1,0 +1,13 @@
+[Unit]
+Description=WOL Magic Packet Listener
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/iabhilashjoshi/wol-shutdown/wol_shutdown.py
+
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
